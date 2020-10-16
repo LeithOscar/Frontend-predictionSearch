@@ -39,12 +39,13 @@ export class AppComponent implements OnInit {
 
   addPredict(val: string): void {
 
+    val = val.toLowerCase();
     if (!this.linearModel.includes(val)) {
       this.linearModel.push(val);
     }
   }
 
-  showPredictions(): boolean{
+  showPredictions(): boolean {
     return this.searchedText.length > 0;
   }
 
