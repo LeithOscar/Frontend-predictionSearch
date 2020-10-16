@@ -1,2 +1,2 @@
 # predictionSearch
-angular with tensorFlow.js
+angular cli project
