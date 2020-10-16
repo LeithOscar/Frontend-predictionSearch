@@ -1,0 +1,14 @@
+.selected-suggestion {
+    background-color: white !important;
+    border: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d41a;
+}
+.selected-suggestion div:hover {
+    background-color: #a695957a; 
+}

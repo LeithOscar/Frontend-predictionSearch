@@ -354,10 +354,12 @@
     <h1>Add text</h1>
     <input type="text" (change)="addPredict($event.target.value)">
     <h2>predictions</h2>
-    <input type="text" (keyup)="predict($event.target.value)" [(ngModel)]="searchedText">
 
-    <div *ngIf="showPredictions()">
-      <h3 *ngFor="let item of predictions; let i = index">{{item}}</h3>
+    <input type="text" (keyup)="predict($event.target.value)" [(ngModel)]="searchedText">
+    
+    <div class="autocomplete-items" *ngIf="showPredictions">
+      <div *ngFor="let s of predictions" [ngClass]="isSelected(s) ? 'selected-suggestion' : ''"
+        (click)="selectSuggestion(s)">{{ s }}</div>
     </div>
 
   </div>

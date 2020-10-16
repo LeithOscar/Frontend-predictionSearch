@@ -59,4 +59,15 @@ export class AppComponent implements OnInit {
     }
     return this.predictions;
   }
+
+  isSelected(sel: string): boolean {
+    const index = this.linearModel.findIndex((item) => item === sel);
+    const exist = this.linearModel[index];
+    if (exist) { return true; }
+    return false;
+  }
+
+  selectSuggestion(sel: string): void {
+    this.searchedText = sel;
+  }
 }
