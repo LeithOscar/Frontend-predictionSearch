@@ -60,8 +60,8 @@ describe('boyerMoorePatternService', () => {
             });
 
             it('find Ñ on text', () => {
-                const searchText = '97';
-                const text = 'nº6498ñ6xxx - num97';
+                const searchText = 'Ñ';
+                const text = 'nº6498Ñ6xxx - num97';
                 const exist = service.badMatchTable(text, searchText);
 
                 expect(exist).toBe(1);
