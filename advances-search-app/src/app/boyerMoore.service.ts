@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { math, Max } from '@tensorflow/tfjs';
-
 
 @Injectable()
 export class BoyerMoorePatternService {
@@ -57,7 +55,7 @@ export class BoyerMoorePatternService {
         this.patternLength = pattern.length;
         this.pattern = pattern;
         this.text = text;
-        this.tableD1(); // bad macht table
+        this.createBadMatchTable(); // bad macht table
         return this.searchBadTable();
     }
 
@@ -84,18 +82,16 @@ export class BoyerMoorePatternService {
 
                 }
                 if (numOfskips === 0) {
-                    // return i;
                     return 1;
                 }
             }
-            // return 0;
         }
         return 0;
     }
 
 
     // create table wrong prefix 'prefijo malo'
-    tableD1(): void {
+    createBadMatchTable(): void {
 
         for (let index = 0; index < this.patternLength; index++) {
             const actualCharacter = this.pattern.charAt(index);
