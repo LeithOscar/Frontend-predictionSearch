@@ -11,11 +11,11 @@ describe('boyerMoorePatternService', () => {
     });
 
 
-    describe('find the word on text', () => {
+    describe('Applying different pattern of Boyyer Moore', () => {
 
-        describe('finbruteForced', () => {
+        describe('findbruteForce', () => {
 
-            it('finbruteForced', () => {
+            it('find ostente on text', () => {
                 const searchText = 'ostente';
                 const text = 'la vecina ostente';
                 const exist = service.bruteForce(text, searchText);
